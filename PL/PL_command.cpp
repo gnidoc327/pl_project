@@ -190,8 +190,9 @@ bool PL_command::operate_command(int index) {
 			if (line_file[j] == '\0')
 				break;
 		temp.name = std::string(line_file, 0, i);
-		temp.data = std::string(line_file, i + 2, j);
+		temp.data = std::string(line_file, i + 1, j);
 		formula_list.push_back(temp);
+		std::cout << "load formul to " << parameter.at(0)<<std::endl;
 		break;
 	}
 	case 6: //file_list
