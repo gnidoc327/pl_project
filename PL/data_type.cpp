@@ -23,49 +23,56 @@ void Var::operator=(Var input) {
 
 Var Var::operator+(Var input) {
 	Var temp;
-	temp.data = this->data + input.data;
+	long double tempData = this->data + input.data;
+	temp.data = (double)tempData;
 	temp.check_real = (input.check_real || this->check_real) ? true : false;
 	return temp;
 }
 
 Var Var::operator-(Var input) {
 	Var temp;
-	temp.data = this->data - input.data;
+	long double tempData = this->data - input.data;
+	temp.data = (double)tempData;
 	temp.check_real = (input.check_real || this->check_real) ? true : false;
 	return temp;
 }
 
 Var Var::operator*(Var input) {
 	Var temp;
-	temp.data = this->data * input.data;
+	long double tempData = this->data * input.data;
+	temp.data = (double)tempData;
 	temp.check_real = (input.check_real || this->check_real) ? true : false;
 	return temp;
 }
 
 Var Var::operator/(Var input) {
 	Var temp;
-	temp.data = this->data / input.data;
+	long double tempData = this->data / input.data;
+	temp.data = (double)tempData;
 	temp.check_real = true;
 	return temp;
 }
 
 Var Var::operator^(Var input) {
 	Var temp;
-	temp.data = pow(this->data, input.data);
+	long double tempData = pow(this->data, input.data);
+	temp.data = (double)tempData;
 	temp.check_real = (input.check_real || this->check_real) ? true : false;
 	return temp;
 }
 
 Var Var::var_sin() {
 	Var temp;
-	temp.data = sin(this->data);
+	long double tempData = sin(this->data);
+	temp.data = (double)tempData;
 	temp.check_real = this->check_real;
 	return temp;
 }
 
 Var Var::var_cos() {
 	Var temp;
-	temp.data = cos(this->data);
+	long double tempData = cos(this->data);
+	temp.data = (double)tempData;
 	temp.check_real = this->check_real;
 	return temp;
 }

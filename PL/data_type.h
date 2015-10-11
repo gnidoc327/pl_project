@@ -6,7 +6,7 @@
 
 class Var {
 private:
-	float data;
+	double data;
 	bool check_real;
 public:
 	Var();
