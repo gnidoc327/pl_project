@@ -56,7 +56,7 @@ Var Var::operator/(Var input) {
 	Var temp;
 	long double tempData = this->data / input.data;
 	temp.data = (double)tempData;
-	temp.check_real = true;
+	temp.check_real = false;
 	return temp;
 }
 
