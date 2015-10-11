@@ -36,28 +36,28 @@ public:
 
 private:
 	std::string command_list[COMMAND_NUM]{
-		"clear",
-		"reset",
-		"list",
-		"save_formula",
-		"load_formula",
-		"load_formulaTofile",
-		"ls",
-		"exit",
-		"help",
-		"about"
+		{"clear"},
+		{"reset"},
+		{"list"},
+		{"save_formula"},
+		{"load_formula"},
+		{"load_formulaTofile"},
+		{"ls"},
+		{"exit"},
+		{"help"},
+		{"about"}
 	};
 
 	std::string calc_list[CALC_NUM]{
-		"equ",
-		"add",
-		"sub",
-		"mul",
-		"div",
-		"pow",
-		"ln",
-		"sin",
-		"cos",
+		{"equ"},
+		{"add"},
+		{"sub"},
+		{"mul"},
+		{"div"},
+		{"pow"},
+		{"ln"},
+		{"sin"},
+		{"cos"},
 	};
 };
 
