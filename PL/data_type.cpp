@@ -12,8 +12,15 @@ Var::Var(double input) {
 }
 
 Var::Var(int input) {
-	this->data = (float)input;
+	this->data = (double)input;
 	this->check_real = false;
+}
+
+Var::Var(std::string input) {
+	this->data = atof(input.c_str());
+	this->check_real = true;
+	if (input.find('.') == std::string::npos) this->check_real = false;
+	else if (input.compare("e") == 0) this->data = 2.71828182845904523536;
 }
 
 void Var::operator=(Var input) {
@@ -75,4 +82,22 @@ Var Var::var_cos() {
 	temp.data = (double)tempData;
 	temp.check_real = this->check_real;
 	return temp;
+}
+
+Var Var::var_log() {
+	Var temp;
+	long double tempData = log(this->data);
+	temp.data = (double)tempData;
+	temp.check_real = this->check_real;
+	return temp;
+}
+
+std::ostream& operator<<(std::ostream& os, const Var& var) {
+	if (var.check_real) {
+		os.setf(std::ios_base::showpoint);
+		os << (double)var.data;
+	} else {
+		os << (int)var.data;
+	}
+	return os;
 }
