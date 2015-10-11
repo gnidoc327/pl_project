@@ -10,7 +10,7 @@ private:
 	bool check_real;
 public:
 	Var();
-	Var(float);
+	Var(double);
 	Var(int);
 	void operator=(Var);
 	Var operator+(Var);

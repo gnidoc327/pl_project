@@ -6,7 +6,7 @@ Var::Var() {
 	this->check_real = false;
 }
 
-Var::Var(float input) {
+Var::Var(double input) {
 	this->data = input;
 	this->check_real = true;
 }
