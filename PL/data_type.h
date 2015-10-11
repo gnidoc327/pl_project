@@ -22,5 +22,10 @@ public:
 	Var var_cos();
 };
 
+struct list_name{
+	std::string name;
+	std::string data;
+};
+
 
 #endif /* !DATA_TYPE_H */
