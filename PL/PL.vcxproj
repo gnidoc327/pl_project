@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="data_type.h" />
+    <ClInclude Include="parser.h" />
+    <ClInclude Include="PL_command.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="data_type.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="parser.cpp" />
+    <ClCompile Include="PL_command.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0F984EBD-D151-47C0-B05E-F677B9E4573C}</ProjectGuid>
     <RootNamespace>PL</RootNamespace>
@@ -119,17 +130,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\PL\data_type.cpp" />
-    <ClCompile Include="..\..\..\PL\main.cpp" />
-    <ClCompile Include="..\..\..\PL\PL_command.cpp" />
-    <ClCompile Include="..\..\..\PL\parser.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\PL\data_type.h" />
-    <ClInclude Include="..\..\..\PL\parser.h" />
-    <ClInclude Include="..\..\..\PL\PL_command.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
